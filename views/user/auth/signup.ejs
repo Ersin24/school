@@ -1,8 +1,9 @@
 <%- include('../includes/head.ejs', {pageTitle: 'Signup'}) %>
 
 <!-- Css -->
-<link rel="stylesheet" href="/styles/base.css" />
 <link rel="stylesheet" href="/styles/forms.css" />
+<link rel="stylesheet" href="/styles/base.css" />
+<link rel="stylesheet" href="/styles/auth.css" />
 </head>
 
 <body>
@@ -10,7 +11,11 @@
 
     <main>
         <h1>Yeni Hesap Oluştur</h1>
-        <form action="" method="">
+        <form action="/uye-ol" method="POST">
+            <p>
+                <label for="name">İsim</label>
+                <input type="text" name="name" id="name" required>
+            </p>
             <p>
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email" required>
@@ -22,10 +27,6 @@
             <p>
                 <label for="password">Şifre</label>
                 <input type="password" name="password" id="password" minlength="6" required>
-            </p>
-            <p>
-                <label for="name">İsim</label>
-                <input type="text" name="name" id="name" required>
             </p>
             <button class="btn">Hesap Oluştur</button>
             <p id="switch-form">

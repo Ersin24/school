@@ -1,0 +1,18 @@
+label{
+    color: var(--color-primary-100);
+    display: block;
+    margin-bottom: var(--space-2);
+}
+
+p:nth-child(4){
+    margin-bottom: var(--space-8);
+}
+
+input,
+textarea{
+    font: inherit;
+    padding: var(--space-2);
+    border-radius: var(--border-radius-small);
+    border: none;
+    width: 90%;
+}
