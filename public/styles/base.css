@@ -4,4 +4,26 @@
 
 html{
     font-family: 'Open Sans', sans-serif, serif;
+    /* Root */
+    --color-gray-50: #E3FDFD;
+    --color-gray-100: #CBF1F5;
+    --color-gray-400: #A6E3E9;
+    --color-gray-500: #A6E3E9;
+
+    --color-primary-100: #ECB390;
+    --color-primary-500: #DF7861;
+    
+    --color-error-100: #F38181;
+    --color-error-500: #B83B5E;
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+  
+    --border-radius-small: 4px;
+    --border-radius-medium: 6px;
+  
+    --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
