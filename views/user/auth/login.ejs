@@ -1,0 +1,33 @@
+<!-- Includes -->
+<%- include('../../shared/includes/head', {pageTitle: 'Giriş Yap'}) %> 
+<!-- Css -->
+<link rel="stylesheet" href="/styles/forms.css">
+<link rel="stylesheet" href="/styles/auth.css">
+
+</head>
+
+<body>
+    <%- include('../../shared/includes/header') %> 
+
+    <main>
+        <h1>Giriş Yap</h1>
+        <form action="/giris-yap" method="POST">
+            <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
+            <p>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+                <label for="password">Şifre</label>
+                <input type="password" name="password" id="password" minlength="6" required>
+            </p>
+            <button class="btn">Giriş Yap</button>
+            <p id="switch-form">
+                <a href="/uye-ol">Yeni bir kullanıcı oluşturun</a>
+            </p>
+        </form>
+    </main>
+
+
+
+<%- include('../../shared/includes/footer') %> 

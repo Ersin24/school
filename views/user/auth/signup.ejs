@@ -1,17 +1,17 @@
-<%- include('../includes/head.ejs', {pageTitle: 'Signup'}) %>
+<%- include('../../shared/includes/head.ejs', {pageTitle: 'Kayıt Ol'}) %>
 
 <!-- Css -->
 <link rel="stylesheet" href="/styles/forms.css" />
-<link rel="stylesheet" href="/styles/base.css" />
 <link rel="stylesheet" href="/styles/auth.css" />
 </head>
 
 <body>
-    <%- include('../includes/header') %> 
+    <%- include('../../shared/includes/header') %> 
 
     <main>
         <h1>Yeni Hesap Oluştur</h1>
         <form action="/uye-ol" method="POST">
+            <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
             <p>
                 <label for="name">İsim</label>
                 <input type="text" name="name" id="name" required>
@@ -28,12 +28,13 @@
                 <label for="password">Şifre</label>
                 <input type="password" name="password" id="password" minlength="6" required>
             </p>
+            <hr>
             <button class="btn">Hesap Oluştur</button>
             <p id="switch-form">
-                Hesabın mı var? <a href="/giris-yap">Giriş yap</a>
+                <a href="/giris-yap">Bunun yerine giriş yap</a>
             </p>
         </form>
     </main>
 
 
-<%- include('../includes/footer') %> 
+<%- include('../../shared/includes/footer') %> 
